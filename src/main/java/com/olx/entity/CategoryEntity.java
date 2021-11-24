@@ -10,8 +10,11 @@ public class CategoryEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @Column(name = "category_name")
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "description")
+    private String description;
 
     public CategoryEntity() {
 
@@ -42,11 +45,20 @@ public class CategoryEntity {
         this.name = name;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public String toString() {
         return "CategoryEntity{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
                 '}';
     }
 }

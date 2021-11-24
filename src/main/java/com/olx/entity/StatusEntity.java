@@ -10,7 +10,7 @@ public class StatusEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @Column(name = "status_name")
+    @Column(name = "name")
     private String name;
 
     public StatusEntity() {
